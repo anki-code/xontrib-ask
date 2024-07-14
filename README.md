@@ -1,5 +1,5 @@
 <p align="center">
-Ask.
+Draft. A zero-dependency alternative to fzf for xonsh. 
 </p>
 
 <p align="center">
@@ -12,8 +12,9 @@ If you like the idea click ⭐ on the repo and <a href="https://twitter.com/inte
 To install use pip:
 
 ```xsh
-xpip install xontrib-ask
-# or: xpip install -U git+https://github.com/anki-code/xontrib-ask
+#xpip install xontrib-ask
+# or: 
+xpip install -U git+https://github.com/anki-code/xontrib-ask
 ```
 
 ## Usage
@@ -21,6 +22,8 @@ xpip install xontrib-ask
 
 ```xsh
 xontrib load ask
+
+echo @(ask('File'))
 ```
 
 
