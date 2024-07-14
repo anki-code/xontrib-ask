@@ -24,6 +24,7 @@ xpip install -U git+https://github.com/anki-code/xontrib-ask
 xontrib load ask
 
 ls @(ask('File'))
+# File: <Tab>
 ```
 
 ## Known issues
