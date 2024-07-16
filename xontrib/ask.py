@@ -7,7 +7,7 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.completion import Completer, Completion
 
 
-__all__ = ()
+__all__ = ['ask']
 
 class FileCompleter(Completer):
     def get_completions(self, document, complete_event):
