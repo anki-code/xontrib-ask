@@ -5,12 +5,11 @@ from pathlib import Path
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.completion import Completer, Completion
-from xonsh.built_ins import XSH
 
 
 __all__ = ()
 
-class DynamicCompleter(Completer):
+class FileCompleter(Completer):
     def get_completions(self, document, complete_event):
         current_input = document.text
 
@@ -21,14 +20,11 @@ class DynamicCompleter(Completer):
 
 
 class Ask:
-    def get_list(self):
-        return [str(f) for f in Path('.').glob('*')] + [str(f) for f in Path('..').glob('*')]
-
     def show_list_and_choose(self, title, options=None):
         title = title.strip() + ': '
-        options = self.get_list()
+
         if options is None:
-            completer = DynamicCompleter()
+            completer = FileCompleter()
         else:
             completer = WordCompleter(options, ignore_case=True)
 
